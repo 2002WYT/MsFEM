@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.env.linux": {
+      "LD_LIBRARY_PATH": "/opt/intel/oneapi/mkl/2024.1/lib:/opt/intel/oneapi/compiler/2024.1/lib:${env:LD_LIBRARY_PATH}"
+    },
+    "git.ignoreLimitWarning": true
+  }
+  
