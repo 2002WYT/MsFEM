@@ -104,12 +104,13 @@ void calculate_Ab(const int nx, const int ny, const int order, const double* bou
     MKL_INT msglvl = 0;  // 输出级别
 
     // 初始化iparm数组，设置PARDISO的默认参数
-    iparm[0] = 1;  // 使用默认值
-    iparm[1] = 2;  // 并行处理
+    iparm[0] = 1;  // 
+    iparm[1] = 3;  //  the nested dissection algorithm
     iparm[5] = 0;  // 
     iparm[7] = 2;  // 迭代步骤
     iparm[9] = 8; // 对称矩阵
-    iparm[10] = 1; // 稳定的默认设置
+    iparm[23] = 1; //  two-level factorization algorithm
+    iparm[24] = 2;
 
     // 调用PARDISO求解器!!!
     pardiso(pt, &maxfct, &mnum, &mtype, &phase, &sizefree, 
